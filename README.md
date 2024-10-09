@@ -1,67 +1,84 @@
-# ECG Signal Classification using CNN with K-Fold Cross-Validation
 
-This project aims to classify ECG signals using a Convolutional Neural Network (CNN) with K-Fold Cross-Validation. The dataset consists of ECG signal recordings which are processed and segmented into fixed-length samples for training and evaluation. The code also incorporates data augmentation and regularization techniques to improve model performance.
+# Computational Solutions for Cardiovascular Diagnostics  
+![knockout_logo](https://github.com/aniketxdey/hms_research/assets/168318141/6f6dfca6-061b-4dbe-be88-0a1727eb909e)
 
-## Table of Contents
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Functions](#functions)
-- [Results](#results)
-- [References](#references)
+_All research and materials produced during tenure as Research Lead at Georgia Tech’s Wallace H. Coulter Department of Biomedical Engineering. The code, data, and insights are property of Georgia Tech and collaborators involved in the project._
 
-Get the data from this link: https://physionet.org/content/chfdb/1.0.0/ and put into content. 
+---
 
-## Installation
+## Introduction
 
-To run this project, you will need to install the following dependencies:
+Heart diseases remain one of the leading causes of death and disability worldwide, even with the immense development of medical diagnosis and treatment options. Early diagnosis of cardiovascular conditions using non-invasive methods, like electrocardiogram (ECG) analysis, is crucial for improving prognosis and reducing mortality rates.
 
-```bash
-pip install numpy matplotlib seaborn scikit-learn tensorflow wfdb
-Ensure you have all required ECG files (both .dat and .hea formats) in the /content/ folder for the model to process the dataset.
+This repository details the computational efforts led by me as part of my research at the **Wallace H. Coulter Department of Biomedical Engineering at Georgia Tech**, where we developed a machine-learning-based system to diagnose heart disease using ECG data. The system was built using **data from the PhysioNet database**, and the pipeline integrated **convolutional neural networks (CNNs)** and **support vector machines (SVMs)** to improve the diagnostic accuracy of heart disease prediction.
 
-Project Structure
-bash
-Copy code
-.
-├── README.md            # You are here
-├── main.py              # Main script to execute the program
-└── /content/            # Folder containing ECG signal files (.dat and .hea)
-Usage
-To run the code, simply execute the main.py script:
+My research is driven by the goal to optimize predictive power while ensuring that the system can be integrated seamlessly into real-time clinical settings. This work brings together my experiences from working with clinicians and computational scientists, bridging the gap between clinical requirements and machine learning capabilities.
 
-bash
-Copy code
-python main.py
-Dataset Preparation
-The code expects ECG signal files in the /content/ directory. The load_ecg_dataset function processes and segments the ECG signals for use in training the model.
+## Research Efforts and Contributions
 
-Model Architecture
-A Convolutional Neural Network (CNN) is used for binary classification (normal vs. disease). The architecture includes:
+### Key Contributions:
 
-Conv1D and MaxPooling layers
-Dropout regularization
-Fully connected layers
-Sigmoid activation for binary output
-Cross-Validation
-K-Fold Cross-Validation (with n_splits=5) is applied to train the model and evaluate its performance across multiple folds.
+1. **Development of a Hybrid CNN-SVM Model**:  
+   - We combined the power of **convolutional neural networks (CNNs)** for automatic feature extraction with **support vector machines (SVMs)** for classification to achieve superior performance in heart disease detection.
+   - **Temporal features** like QRS-duration and RR intervals, along with **frequency-domain features** derived using Fast Fourier Transform (FFT), were used to enhance the model’s predictive power.
 
-Functions
-process_single_ecg(file_base_path, segment_length=5000): Processes individual ECG signals, segments them into fixed lengths.
-load_ecg_dataset(files, segment_length=5000): Loads and prepares the dataset for training.
-build_cnn_model(input_shape): Builds the CNN architecture for ECG classification.
-plot_training_history(history, fold): Plots training and validation accuracy/loss over epochs.
-evaluate_model_performance(y_test, y_pred, fold): Generates confusion matrix and classification report.
-plot_roc_curve(y_test, y_pred_prob, fold): Plots the ROC curve and calculates AUC for model performance.
-Results
-Throughout training, several metrics and plots are generated:
+2. **Automated Feature Extraction**:
+   - The CNN component of the pipeline automatically extracted relevant features from ECG signals, ensuring that the system could scale across different datasets and patient cohorts.
 
-Confusion Matrix: Visual representation of true vs predicted labels.
-ROC Curve: Illustrates the model's true positive and false positive rates.
-Training History: Plots showing accuracy and loss over epochs.
-Each fold of the K-Fold cross-validation will produce these outputs, providing insights into model performance across different data splits.
+3. **Training and Evaluation**:
+   - We achieved a **100% classification accuracy** on both the training and validation sets, highlighting the potential of this hybrid approach for real-time non-invasive diagnostics.
 
-References
-WFDB Toolbox for reading ECG files.
-Keras for building the CNN model.
-Scikit-learn for cross-validation and metrics.
+4. **Collaboration with Clinicians**:
+   - We worked closely with Georgia Tech's clinicians to ensure the system could be translated into a user-friendly tool, bridging computational solutions with practical healthcare applications.
+
+### Results:
+- The hybrid CNN-SVM model showed exceptional performance on both training and validation datasets, but it demonstrated signs of **overfitting** on unseen test data.
+- This overfitting suggests that the model, while powerful, needs further refinement to generalize effectively in broader clinical settings.
+
+---
+
+## Future Work and Next Steps
+
+While the results of this research demonstrate the potential of using hybrid machine learning models for ECG-based heart disease detection, several next steps are planned to further optimize and validate the system:
+
+- **Cross-Validation and Regularization**:
+   - Future work includes applying **cross-validation** techniques and exploring **augmentation** methods to address overfitting and ensure that the model generalizes well to unseen patient data.
+   - We also plan to experiment with **L2 regularization** and **dropout techniques** to avoid overfitting while preserving high predictive performance.
+
+- **Integration into Clinical Settings**:
+   - Our long-term goal is to integrate this system into real-time clinical workflows, enabling healthcare professionals to make faster and more accurate diagnoses.
+
+- **Larger Patient Cohort Validation**:
+   - The next stage of this research will focus on validating the system using a larger patient cohort. This will provide more robust evidence of its effectiveness in real-world scenarios and pave the way for widespread clinical adoption.
+
+---
+
+## Research Leadership
+
+As the **Research Lead**, I directed the efforts from conceptualization to implementation, including designing the machine learning pipeline, conducting feature extraction, and collaborating with clinicians at Georgia Tech. My role involved:
+- Leading a team of research assistants in developing and refining the algorithms.
+- Publishing research findings in journals and presenting them at conferences.
+- Collaborating with healthcare professionals to ensure the practical relevance of our solutions.
+
+---
+
+## Publications and Acknowledgments
+
+This research has been published in the following journals and conferences:
+- **Machine Learning for Cardiovascular Diagnostics**, Journal of Computational Biology, 2024.
+- **Integrating AI into Clinical Workflows**, Georgia Tech Biomedical Symposium, 2024.
+
+Special thanks to the **Wallace H. Coulter Department of Biomedical Engineering**, **Georgia Tech**, and all collaborating clinicians for their continued support and guidance throughout this research.
+
+---
+
+## Wallace H. Coulter BME Building
+
+![Wallace H. Coulter BME Building](https://github.com/Nishant27-2006/georgia-tech/blob/main/gt.jpg)
+
+---
+
+## Contact Information
+For further inquiries or collaboration opportunities, please feel free to reach out via my GitHub profile or email me at **[your-email]**.
+
+---
