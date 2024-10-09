@@ -72,8 +72,6 @@ Special thanks to the **Wallace H. Coulter Department of Biomedical Engineering*
 
 ---
 
-## Wallace H. Coulter BME Building
-
 ![Wallace H. Coulter BME Building](https://github.com/Nishant27-2006/georgia-tech/blob/main/gtcfml.png)
 
 ---
