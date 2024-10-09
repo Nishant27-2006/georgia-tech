@@ -1,8 +1,8 @@
 
 # Computational Solutions for Cardiovascular Diagnostics  
-![knockout_logo](https://github.com/Nishant27-2006/georgia-tech/blob/main/gt.jpg)
+![knockout_logo](https://github.com/Nishant27-2006/georgia-tech/blob/main/gtcfml.png)
 
-_All research and materials produced during tenure as Research Lead at Georgia Tech’s Wallace H. Coulter Department of Biomedical Engineering. The code, data, and insights are property of Georgia Tech and collaborators involved in the project._
+_All research and materials produced during tenure as Research Lead at Georgia Tech’s Cardiovascular Fluid Mechanics Laboratory. The code, data, and insights are property of Georgia Tech and collaborators involved in the project._
 
 ---
 
