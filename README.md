@@ -77,6 +77,6 @@ Special thanks to the **Wallace H. Coulter Department of Biomedical Engineering*
 ---
 
 ## Contact Information
-For further inquiries or collaboration opportunities, please feel free to reach out via my GitHub profile or email me at **[your-email]**.
+For further inquiries or collaboration opportunities, please feel free to reach out via my GitHub profile or email me at **nishantg2706@gmail.com**.
 
 ---
