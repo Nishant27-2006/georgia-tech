@@ -1,6 +1,6 @@
 
 # Computational Solutions for Cardiovascular Diagnostics  
-![knockout_logo](https://github.com/aniketxdey/hms_research/assets/168318141/6f6dfca6-061b-4dbe-be88-0a1727eb909e)
+![knockout_logo](https://github.com/Nishant27-2006/georgia-tech/blob/main/gt.jpg)
 
 _All research and materials produced during tenure as Research Lead at Georgia Tech’s Wallace H. Coulter Department of Biomedical Engineering. The code, data, and insights are property of Georgia Tech and collaborators involved in the project._
 
